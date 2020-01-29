@@ -40,6 +40,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
       <HintPath>..\..\..\Documents\OMR-PROJECT\bunifu\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\Documents\OMR-PROJECT\bunifu\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
       <HintPath>..\..\..\Documents\OMR-PROJECT\bunifu\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
     </Reference>
@@ -77,6 +80,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BubblesGenerator.cs" />
     <Compile Include="ChooseModelControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -97,6 +101,12 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEdit.Designer.cs">
+      <DependentUpon>UserControlEdit.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ChooseModelControl.resx">
       <DependentUpon>ChooseModelControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,9 +121,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEdit.resx">
+      <DependentUpon>UserControlEdit.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -127,6 +141,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\test1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\test2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -110,21 +110,33 @@ namespace RoboMark
 
         private void PictureBox13_Click(object sender, EventArgs e)
         {
-            NavigateToMarkUserControl();
+        
+            UserControl1 us = new UserControl1();
+            NavigateToMarkUserControl(us);
         }
 
-        private void NavigateToMarkUserControl()
-        {
-            UserControl1 us = new UserControl1();
-            us.Dock = DockStyle.Fill;
-            markPanel.Controls.Add(us);
-            markPanel.Controls["UserControl1"].BringToFront();
-            markPanel.Controls["PanelSide"].BringToFront();
-        }
 
         private void MarkPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private void PictureBox9_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void NavigateToMarkUserControl(Control us)
+        {
+            us.Dock = DockStyle.Fill;
+            markPanel.Controls.Add(us);
+            markPanel.Controls["UserControl1"].BringToFront();
+            markPanel.Controls["PanelSide"].BringToFront();
+        }
+        private void PictureBox11_Click(object sender, EventArgs e)
+        {
+        
+        }
+
     }
 }

@@ -34,7 +34,8 @@ namespace RoboMark
 
         private void BunifuButton1_Click(object sender, EventArgs e)
         {
-
+            UserControlEdit m = new UserControlEdit();
+            NavigateToManualModelEditor(m);
         }
 
         private void PictureBox9_Click(object sender, EventArgs e)
@@ -134,6 +135,16 @@ namespace RoboMark
 
         private void PictureBox4_Click(object sender, EventArgs e)
         {
+           
+            
+        }
+        private void NavigateToManualModelEditor(Control value)
+        {
+            UserControlEdit m = new UserControlEdit();
+            m.Dock = DockStyle.Fill;
+            Form1.instance().MarkPanelContainer().Controls.Add(m);
+            Form1.instance().MarkPanelContainer().Controls["UserControlEdit"].BringToFront();
+            Form1.instance().MarkPanelContainer().Controls["PanelSide"].BringToFront();
 
         }
 

@@ -36,16 +36,16 @@ namespace RoboMark
 
         private void BunifuButton1_Click(object sender, EventArgs e)
         {
-            NavigateToNextUserControl();
-        }
-
-        private void NavigateToNextUserControl()
-        {
             ChooseModelControl m = new ChooseModelControl();
-            m.Dock = DockStyle.Fill;
-            Form1.instance().MarkPanelContainer().Controls.Add(m);
+            NavigateToNextUserControl(m);
+        }
+        private void NavigateToNextUserControl(Control value)
+        {
+            value.Dock = DockStyle.Fill;
+            Form1.instance().MarkPanelContainer().Controls.Add(value);
             Form1.instance().MarkPanelContainer().Controls["ChooseModelControl"].BringToFront();
             Form1.instance().MarkPanelContainer().Controls["PanelSide"].BringToFront();
+
         }
     }
 }
